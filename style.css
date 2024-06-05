@@ -1,0 +1,125 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Mithulan Nanthakumar, May 30th 2024 */
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: black;
+    position: relative;
+}
+
+/* header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.title {
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(0, 255, 179), rgb(35, 113, 216));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timer {
+    font-weight: 800;
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(90deg, rgb(0, 255, 179), rgb(35, 113, 216));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.score, .mistakes {
+    font-weight: 500;
+}
+
+.score {
+    color: rgb(0, 255, 179);
+}
+
+.mistakes {
+    color: rgb(35, 113, 216);
+}
+
+.resetBtn {
+    color: white;
+    border: none;
+    background: linear-gradient(90deg, rgb(0, 255, 179), rgb(35, 113, 216));
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin: auto;
+    width: 30%;
+}
+
+.resetBtn:focus {
+    outline: none;
+}
+
+.infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div.tileIMG {
+    object-fit: cover;
+    background: rgb(93, 187, 242);
+    transform: rotateY(180deg);
+}
+
+.cover {
+    background: black;
+    border: solid 5px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgb(0, 255, 179), rgb(35, 113, 216));
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
